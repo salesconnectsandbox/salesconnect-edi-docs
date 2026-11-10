@@ -1,0 +1,105 @@
+/* salesconnect brand for the MPI EDI Integration Guide */
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap");
+
+:root {
+  --sc-deep: #020e1e;
+  --sc-navy: #0e2e47;
+  --sc-navy-2: #0d2130;
+  --sc-cyan: #d7f0f5;
+  --sc-teal: #1f9bb4;
+  --sc-glow: #5fd3e6;
+  --md-primary-fg-color: #0e2e47;
+  --md-primary-fg-color--light: #1a4466;
+  --md-primary-fg-color--dark: #020e1e;
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: #1f9bb4;
+  --md-typeset-a-color: #17809a;
+}
+
+/* Header */
+.md-header {
+  background: linear-gradient(90deg, var(--sc-deep) 0%, var(--sc-navy) 100%);
+  box-shadow: none;
+  border-bottom: 1px solid rgba(215, 240, 245, .12);
+}
+.md-header__button.md-logo { display: none; }
+.md-header__inner { height: 3rem; }
+.md-sidebar { top: 3rem; }
+.md-header__title {
+  font-family: Barlow, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: .03em;
+  margin-left: .8rem;
+}
+.md-header__title::after {
+  content: "powered by salesconnect.";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: .62rem;
+  letter-spacing: .14em;
+  color: var(--sc-cyan);
+  opacity: .8;
+  pointer-events: none;
+}
+.md-header__title { position: relative; }
+@media screen and (max-width: 76.25em) { .md-header__title::after { display: none; } }
+.md-search__form { background-color: rgba(215, 240, 245, .12); }
+
+/* Typography */
+.md-typeset { font-weight: 400; color: #14212c; }
+.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+  font-family: Jost, "Futura", sans-serif;
+  color: var(--sc-navy);
+}
+.md-typeset h1 { font-weight: 300; letter-spacing: .02em; }
+.md-typeset h2 { font-weight: 400; letter-spacing: .01em; }
+.md-typeset h3 { font-weight: 500; }
+
+/* Navigation */
+.md-nav__item .md-nav__link--active,
+.md-nav__link:hover { color: var(--sc-teal); }
+.md-nav__item--section > .md-nav__link {
+  font-family: Barlow, sans-serif;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--sc-navy) !important;
+}
+@media screen and (min-width: 76.25em) {
+  .md-nav--primary > .md-nav__title { display: none; }
+}
+
+/* Tables */
+.md-typeset table:not([class]) th {
+  background: var(--sc-cyan);
+  color: var(--sc-navy);
+  font-weight: 600;
+}
+
+/* Admonitions */
+.md-typeset .admonition, .md-typeset details {
+  border-color: var(--sc-teal);
+}
+.md-typeset .admonition-title, .md-typeset summary {
+  background-color: rgba(215, 240, 245, .6) !important;
+}
+
+/* Code */
+.md-typeset .highlight span.filename {
+  background: var(--sc-navy);
+  color: #fff;
+  font-family: Jost, "Futura", sans-serif;
+  letter-spacing: .04em;
+}
+
+/* Footer */
+.md-footer { background-color: var(--sc-navy); }
+.md-footer-meta { background-color: var(--sc-deep); }
+.md-footer-meta a { color: var(--sc-cyan) !important; }
+.md-copyright { font-family: Jost, "Futura", sans-serif; letter-spacing: .04em; }
+.md-header__topic { font-weight: 400; }
+.md-typeset h2[id], .md-typeset h3[id] { scroll-margin-top: 3.4rem; }
+.md-header__topic:first-child { font-weight: 400; }

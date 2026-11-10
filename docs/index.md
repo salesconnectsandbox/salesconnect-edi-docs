@@ -1,6 +1,6 @@
-# EDI Integration Guide
+# MPI EDI Integration Guide
 
-This guide describes how suppliers exchange orders, order responses, despatch advices and invoices with **getbigger s.r.o.** (part of the SalesConnect group) via EDI.
+This guide describes how suppliers connect to **MPI (Market Place Integrator)**, the order management platform developed and operated by **salesconnect**, and exchange orders, order responses, despatch advices and invoices with **getbigger s.r.o.** via EDI.
 
 It is not an API. There are no endpoints to call. All communication runs through EDI mailboxes identified by GLN numbers, and the messages are routed by the EDI service providers of both parties. This guide explains the business process, the rules each message must follow, and shows a complete example of every message.
 
@@ -21,7 +21,7 @@ It is not an API. There are no endpoints to call. All communication runs through
 | **Purchaser** | getbigger s.r.o., Czech Republic. Places orders and receives the Supplier's responses, despatch advices and invoices through its EDI mailbox. |
 | **Supplier** | A company with a cooperation agreement with the Purchaser. Accepts orders, packs them and delivers them to the cross-dock with its own transport and at its own cost. |
 | **End customer** | The buyer on a sales channel (marketplace or e-shop) for whom the order is ultimately intended. |
-| **MPI** | The Purchaser's order management system. It creates, sends, receives and processes all EDI messages. |
+| **MPI** | Market Place Integrator – the order management platform by salesconnect used by the Purchaser. MPI creates, sends, receives and processes all EDI messages. |
 | **Cross-dock** | The logistics location operated for the Purchaser. The Supplier delivers all orders there; from there the parcels continue to the end customers. |
 
 ## Cooperation model

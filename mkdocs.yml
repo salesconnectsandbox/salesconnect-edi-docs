@@ -1,28 +1,31 @@
-site_name: EDI Integration Guide
-site_description: EDI integration guide for suppliers of getbigger s.r.o. (SalesConnect group)
-copyright: SalesConnect group – getbigger s.r.o.
+site_name: MPI EDI integration guide
+site_description: EDI integration guide for suppliers connecting to MPI (Market Place Integrator) by salesconnect
+copyright: 'MPI – Market Place Integrator &middot; Powered by <a href="https://www.salesconnect.cz/en">salesconnect.</a> &middot; &copy; 2026 salesconnect, s.r.o.'
 
 theme:
   name: material
   language: en
+  font:
+    text: Barlow
+    code: Roboto Mono
+  palette:
+    scheme: default
+    primary: custom
+    accent: custom
   features:
     - navigation.sections
+    - toc.integrate
     - navigation.top
     - navigation.footer
     - content.code.copy
     - content.tabs.link
     - search.highlight
-  palette:
-    - scheme: default
-      primary: indigo
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      primary: indigo
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+
+extra:
+  generator: false
+
+extra_css:
+  - assets/brand.css
 
 markdown_extensions:
   - admonition
@@ -44,15 +47,17 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
 
 nav:
-  - Overview: index.md
-  - Getting connected: getting-connected.md
-  - Order process: process.md
-  - Identifiers and formats: identifiers.md
+  - Getting started:
+      - Overview: index.md
+      - Getting connected: getting-connected.md
+      - Order process: process.md
+      - Identifiers and formats: identifiers.md
   - Messages:
       - ORDERS – purchase order: messages/orders.md
       - ORDRSP – order response: messages/ordrsp.md
       - ORDCHG – order cancellation: messages/ordchg.md
       - DESADV – despatch advice: messages/desadv.md
       - INVOIC – invoice and credit note: messages/invoic.md
-  - Code lists: code-lists.md
-  - Changelog: changelog.md
+  - Reference:
+      - Code lists: code-lists.md
+      - Changelog: changelog.md
